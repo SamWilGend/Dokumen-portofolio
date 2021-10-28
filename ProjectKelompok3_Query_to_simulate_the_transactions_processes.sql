@@ -1,0 +1,14 @@
+BEGIN TRAN
+INSERT INTO HeaderPurchaseTransaction VALUES ('PU021','ST118','VE003','2020-12-10 12:38:00')
+INSERT INTO DetailPurchaseTransaction VALUES ('PU021','CL016','2')
+INSERT INTO DetailPurchaseTransaction VALUES ('PU021','CL019','1')
+ROLLBACK
+COMMIT
+
+BEGIN TRAN
+INSERT INTO HeaderSalesTransaction VALUES ('SA022','ST113','CU009','2020-12-10 12:54:00')
+INSERT INTO DetailSalesTransaction VALUES ('SA022','CL008','1')
+INSERT INTO DetailSalesTransaction VALUES ('SA022','CL013','3')
+INSERT INTO DetailSalesTransaction VALUES ('SA022','CL017','1')
+ROLLBACK
+COMMIT
